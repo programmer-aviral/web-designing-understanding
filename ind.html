@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A beginner-friendly, hands-on Web Publishing syllabus project.">
+  <title>Web Publishing Lab | Learn HTML & CSS</title>
+  <!-- External CSS: saved separately in styles.css and linked here. -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Internal CSS example: useful for page-only styles, but external CSS is best for a multi-page site. -->
+  <style>
+    .internal-css-example { border-left: 5px solid #7c3aed; padding-left: 1rem; }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="hero" id="top">
+    <p class="eyebrow">BCA • WEB PUBLISHING PRACTICAL PROJECT</p>
+    <h1>Build Your First <span>Web Publishing Lab</span></h1>
+    <p class="hero-copy">One friendly website to practise HTML structure, links, images, tables, forms, CSS, frames, and publishing a real site.</p>
+    <a class="button" href="#start">Start learning ↓</a>
+  </header>
+
+  <nav class="site-nav" aria-label="Main navigation">
+    <a href="#start">Start</a><a href="#html">HTML</a><a href="#links-media">Links & media</a><a href="#tables">Tables</a><a href="#forms">Forms</a><a href="#css">CSS</a><a href="#frames">Frames</a><a href="#publish">Publish</a>
+  </nav>
+
+  <main id="main-content">
+    <section id="start" class="section intro-grid">
+      <div>
+        <p class="section-label">01 — Your learning map</p>
+        <h2>What is Web Publishing?</h2>
+        <p>Web publishing means planning, creating, testing, uploading, and maintaining information on the web. A site needs a domain name, hosting space, web files, and a way to upload them.</p>
+        <div class="flow" aria-label="Website publishing process">
+          <span>Plan</span><b>→</b><span>Design</span><b>→</b><span>Code</span><b>→</b><span>Test</span><b>→</b><span>Upload</span><b>→</b><span>Maintain</span>
+        </div>
+      </div>
+      <aside class="note-card">
+        <h3>History in 30 seconds</h3>
+        <p>HTML was created by Tim Berners-Lee to share linked documents on the World Wide Web. Modern HTML is <strong>HTML5</strong>, which works with CSS for style and JavaScript for interaction.</p>
+        <p><strong>Tools:</strong> text/HTML editor (VS Code), browser, image editor, and FTP/SFTP tool or a hosting dashboard.</p>
+      </aside>
+    </section>
+
+    <section id="html" class="section">
+      <p class="section-label">02 — HTML foundations</p>
+      <h2>Basic tags make the page structure</h2>
+      <div class="two-col">
+        <article class="lesson-card">
+          <h3>Page skeleton</h3>
+          <pre><code>&lt;!doctype html&gt;
+&lt;html&gt;
+  &lt;head&gt;&lt;title&gt;My page&lt;/title&gt;&lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Main heading&lt;/h1&gt;
+    &lt;p&gt;A paragraph.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+          <p><code>&lt;head&gt;</code> holds page information; <code>&lt;body&gt;</code> holds visible content. <code>&lt;title&gt;</code> appears in the browser tab.</p>
+        </article>
+        <article class="lesson-card internal-css-example">
+          <h3>Text, headings & comments</h3>
+          <h1 class="sample-heading">Heading 1</h1>
+          <p>Use <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> in order—do not skip levels just for size. This is a <strong>bold</strong>, <em>italic</em>, <mark>marked</mark> sentence.<br>A <code>&lt;br&gt;</code> starts this line.</p>
+          <!-- This is an HTML comment: it is not displayed on the page. -->
+          <p class="muted">Old syllabus tags: <code>align</code> and <code>&lt;font&gt;</code> are obsolete. Use CSS such as <code>text-align</code>, <code>color</code>, and <code>font-family</code>.</p>
+        </article>
+      </div>
+      <hr>
+      <div class="two-col">
+        <article class="lesson-card">
+          <h3>Lists</h3>
+          <p>Ordered list (<code>&lt;ol&gt;</code>):</p>
+          <ol><li>Open the editor</li><li>Write HTML</li><li>Save as <code>.html</code></li></ol>
+          <p>Unordered list (<code>&lt;ul&gt;</code>) with a circle bullet:</p>
+          <ul class="circle-list"><li>HTML editor</li><li>Browser</li><li>Images</li></ul>
+        </article>
+        <article class="lesson-card">
+          <h3>Description list & address</h3>
+          <dl><dt>HTML</dt><dd>The language that structures a web page.</dd><dt>CSS</dt><dd>The language that styles a web page.</dd></dl>
+          <address>Created for a BCA Web Publishing learner<br><a href="mailto:student@example.com">student@example.com</a></address>
+        </article>
+      </div>
+    </section>
+
+    <section id="links-media" class="section tinted">
+      <p class="section-label">03 — Links, images & horizontal rules</p>
+      <h2>Connect your pages and content</h2>
+      <div class="three-col">
+        <article class="lesson-card"><h3>External link</h3><p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener">Open HTML learning docs ↗</a></p><p class="muted"><code>href</code> gives a link destination. Use <code>rel="noopener"</code> with <code>target="_blank"</code>.</p></article>
+        <article class="lesson-card"><h3>Same-page link</h3><p><a href="#forms">Jump to the form section</a></p><p class="muted">An <code>id</code> gives a section an anchor destination: <code>href="#forms"</code>.</p></article>
+        <article class="lesson-card"><h3>Image link</h3><a class="image-link" href="#publish" aria-label="Go to publish section"><img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=900&q=80" alt="Notebook, computer, and plant on a desk"><span>Click image: publish your site →</span></a></article>
+      </div>
+      <p class="callout">The image uses <code>src</code> (file location) and <code>alt</code> (a text description for accessibility). In your own project, save an image in an <code>images</code> folder and use a relative path like <code>images/logo.jpg</code>.</p>
+    </section>
+
+    <section id="tables" class="section">
+      <p class="section-label">04 — Tables</p>
+      <h2>Use tables for data, not page layout</h2>
+      <div class="table-wrap"><table>
+        <caption>Weekly Web Publishing Practice Plan</caption>
+        <thead><tr><th scope="col">Day</th><th scope="col">Topic</th><th scope="col">Practice time</th></tr></thead>
+        <tbody><tr><td>Monday</td><td>HTML tags & lists</td><td>30 min</td></tr><tr><td>Tuesday</td><td colspan="2">Links, images and tables — 45 min (this cell uses <code>colspan="2"</code>)</td></tr><tr><td>Wednesday</td><td>Forms</td><td>30 min</td></tr><tr><td>Thursday</td><td>CSS</td><td>45 min</td></tr></tbody>
+      </table></div>
+      <p class="muted">Modern CSS controls borders, width, spacing and alignment. Historical table attributes include <code>border</code>, <code>cellspacing</code>, <code>cellpadding</code>, <code>width</code>, and <code>align="center"</code>; avoid them in new HTML.</p>
+    </section>
+
+    <section id="forms" class="section tinted">
+      <p class="section-label">05 — Forms & two-way communication</p>
+      <h2>Collect data — then a backend can process it</h2>
+      <p>A form sends named values to a server using an <code>action</code> URL and a <code>method</code> (usually GET or POST). This demo <strong>does not send data anywhere</strong>; it validates your input locally and shows what a backend would receive.</p>
+      <form id="practice-form" novalidate>
+        <div class="form-grid">
+          <label>Full name <input name="fullName" type="text" autocomplete="name" required minlength="2" placeholder="e.g., Asha Sharma"></label>
+          <label>Email <input name="email" type="email" autocomplete="email" required placeholder="asha@example.com"></label>
+          <label>Birth date <input name="birthDate" type="date"></label>
+          <label>Practice hours (1–10) <input name="hours" type="number" min="1" max="10" value="2"></label>
+        </div>
+        <fieldset><legend>Favourite topic</legend><label><input type="radio" name="topic" value="HTML" required> HTML</label><label><input type="radio" name="topic" value="CSS"> CSS</label><label><input type="radio" name="topic" value="Forms"> Forms</label></fieldset>
+        <label>What did you learn? <textarea name="message" rows="4" required placeholder="Write one sentence…"></textarea></label>
+        <label class="check"><input type="checkbox" name="ready" required> I understand this is a local practice form.</label>
+        <div class="form-actions"><button class="button" type="submit">Validate my form</button><button class="button secondary" type="reset">Reset</button></div>
+        <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
+      </form>
+      <details><summary>Essential form tags & input types</summary><p><code>&lt;form&gt;</code>, <code>&lt;label&gt;</code>, <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, <code>&lt;select&gt;</code>, <code>&lt;option&gt;</code>, <code>&lt;button&gt;</code>, <code>&lt;fieldset&gt;</code>, and <code>&lt;legend&gt;</code>. Useful input types include text, email, password, number, date, radio, checkbox, file, range, submit and reset.</p></details>
+    </section>
+
+    <section id="css" class="section">
+      <p class="section-label">06 — CSS basics</p>
+      <h2>CSS changes how HTML looks</h2>
+      <div class="two-col"><article class="lesson-card"><h3>Basic syntax</h3><pre><code>selector {
+  property: value;
+}
+
+p { color: #334155; }</code></pre><p>A selector chooses HTML elements; declarations change their properties.</p></article><article class="lesson-card"><h3>Three ways to add CSS</h3><ol><li><strong>Inline:</strong> <code>style="color: tomato"</code> on one element.</li><li><strong>Internal:</strong> a <code>&lt;style&gt;</code> block in <code>&lt;head&gt;</code>.</li><li><strong>External:</strong> a separate <code>styles.css</code> file linked with <code>&lt;link&gt;</code>.</li></ol><p class="muted">This project demonstrates all three. External CSS is easiest to reuse and maintain.</p></article></div>
+      <div class="css-playground"><h3>Try CSS yourself</h3><p id="style-target">Change my colour, size and alignment.</p><div class="controls"><label>Colour <input id="colour-picker" type="color" value="#7c3aed"></label><label>Font size <input id="size-slider" type="range" min="16" max="42" value="22"></label><label>Alignment <select id="align-select"><option value="left">Left</option><option value="center">Center</option><option value="right">Right</option></select></label></div><p class="muted">Properties used here: <code>color</code>, <code>font-size</code>, <code>text-align</code>. See <code>styles.css</code> for <code>background</code>, <code>margin</code>, <code>padding</code>, <code>border</code>, <code>display</code>, <code>grid</code>, and more.</p></div>
+    </section>
+
+    <section id="frames" class="section tinted">
+      <p class="section-label">07 — Frames: legacy concept, modern replacement</p>
+      <h2>Frames are obsolete in HTML5</h2>
+      <p>Older websites used <code>&lt;frameset rows="…"&gt;</code> or <code>&lt;frameset cols="…"&gt;</code> with <code>&lt;frame src="…" frameborder="…"&gt;</code>. Rows and columns divided one browser window into separate documents; <code>src</code> chose each document, while attributes such as <code>frameborder</code>, width and height changed appearance.</p>
+      <div class="warning"><strong>Do not use <code>&lt;frameset&gt;</code> or <code>&lt;frame&gt;</code> for new websites.</strong> They are not supported in HTML5 and create navigation/accessibility problems. Use CSS Grid/Flexbox for page layout, and use <code>&lt;iframe&gt;</code> only when embedding another allowed document.</div>
+      <div class="frame-demo"><div class="mini-pane"><h3>CSS Grid column 1</h3><p>Modern layout area.</p></div><div class="mini-pane"><h3>CSS Grid column 2</h3><p>Modern layout area.</p></div></div>
+      <details><summary>Legacy code you may see in an exam (do not use in new work)</summary><pre><code>&lt;frameset rows="25%,75%" frameborder="1"&gt;
+  &lt;frame src="header.html"&gt;
+  &lt;frameset cols="30%,70%"&gt;
+    &lt;frame src="menu.html"&gt;
+    &lt;frame src="content.html"&gt;
+  &lt;/frameset&gt;
+&lt;/frameset&gt;</code></pre></details>
+      <details><summary>Modern iframe example</summary><p>An iframe needs a useful <code>title</code>; the embedded source must allow framing.</p><pre><code>&lt;iframe src="lesson.html" title="HTML lesson" width="600" height="300"&gt;&lt;/iframe&gt;</code></pre></details>
+    </section>
+
+    <section id="publish" class="section publish">
+      <p class="section-label">08 — Publish safely</p>
+      <h2>From files on your computer to a website</h2>
+      <ol class="checklist"><li>Register a memorable domain name (for example, <em>myportfolio.in</em>).</li><li>Choose a host that gives you server space and a control panel.</li><li>Keep <code>index.html</code>, <code>styles.css</code>, JavaScript and images organized.</li><li>Test links, keyboard navigation, mobile layout, spelling and image alt text.</li><li>Upload via the host dashboard, FTP/SFTP software, or Git-based deployment.</li><li>Maintain the site: update content, back up files, use HTTPS, and avoid exposing passwords or private data.</li></ol>
+      <p class="callout">Common problems: broken file paths, huge images, poor contrast, missing mobile styles, dead links, outdated content, and forms with no secure server-side handling.</p>
+      <a class="button" href="#top">Back to top ↑</a>
+    </section>
+  </main>
+  <footer><p>Made as a hands-on Web Publishing study project. Open <code>README.md</code> for a guided practice plan.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>
